@@ -1,0 +1,85 @@
+# Project: Chessai
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = src/Menu.o src/main.o src/System.o src/Game.o src/Player.o src/Human.o src/Interface.o src/Trongtai.o src/ChessBoard.o src/Piece.o src/Vua.o src/Hau.o src/Xe.o src/Ma.o src/Tuong.o src/Tot.o src/Move.o src/History.o src/Point.o src/Pointer.o
+LINKOBJ  = src/Menu.o src/main.o src/System.o src/Game.o src/Player.o src/Human.o src/Interface.o src/Trongtai.o src/ChessBoard.o src/Piece.o src/Vua.o src/Hau.o src/Xe.o src/Ma.o src/Tuong.o src/Tot.o src/Move.o src/History.o src/Point.o src/Pointer.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Chessai.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+src/Menu.o: src/Menu.cpp
+	$(CPP) -c src/Menu.cpp -o src/Menu.o $(CXXFLAGS)
+
+src/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o src/main.o $(CXXFLAGS)
+
+src/System.o: src/System.cpp
+	$(CPP) -c src/System.cpp -o src/System.o $(CXXFLAGS)
+
+src/Game.o: src/Game.cpp
+	$(CPP) -c src/Game.cpp -o src/Game.o $(CXXFLAGS)
+
+src/Player.o: src/Player.cpp
+	$(CPP) -c src/Player.cpp -o src/Player.o $(CXXFLAGS)
+
+src/Human.o: src/Human.cpp
+	$(CPP) -c src/Human.cpp -o src/Human.o $(CXXFLAGS)
+
+src/Interface.o: src/Interface.cpp
+	$(CPP) -c src/Interface.cpp -o src/Interface.o $(CXXFLAGS)
+
+src/Trongtai.o: src/Trongtai.cpp
+	$(CPP) -c src/Trongtai.cpp -o src/Trongtai.o $(CXXFLAGS)
+
+src/ChessBoard.o: src/ChessBoard.cpp
+	$(CPP) -c src/ChessBoard.cpp -o src/ChessBoard.o $(CXXFLAGS)
+
+src/Piece.o: src/Piece.cpp
+	$(CPP) -c src/Piece.cpp -o src/Piece.o $(CXXFLAGS)
+
+src/Vua.o: src/Vua.cpp
+	$(CPP) -c src/Vua.cpp -o src/Vua.o $(CXXFLAGS)
+
+src/Hau.o: src/Hau.cpp
+	$(CPP) -c src/Hau.cpp -o src/Hau.o $(CXXFLAGS)
+
+src/Xe.o: src/Xe.cpp
+	$(CPP) -c src/Xe.cpp -o src/Xe.o $(CXXFLAGS)
+
+src/Ma.o: src/Ma.cpp
+	$(CPP) -c src/Ma.cpp -o src/Ma.o $(CXXFLAGS)
+
+src/Tuong.o: src/Tuong.cpp
+	$(CPP) -c src/Tuong.cpp -o src/Tuong.o $(CXXFLAGS)
+
+src/Tot.o: src/Tot.cpp
+	$(CPP) -c src/Tot.cpp -o src/Tot.o $(CXXFLAGS)
+
+src/Move.o: src/Move.cpp
+	$(CPP) -c src/Move.cpp -o src/Move.o $(CXXFLAGS)
+
+src/History.o: src/History.cpp
+	$(CPP) -c src/History.cpp -o src/History.o $(CXXFLAGS)
+
+src/Point.o: src/Point.cpp
+	$(CPP) -c src/Point.cpp -o src/Point.o $(CXXFLAGS)
+
+src/Pointer.o: src/Pointer.cpp
+	$(CPP) -c src/Pointer.cpp -o src/Pointer.o $(CXXFLAGS)
